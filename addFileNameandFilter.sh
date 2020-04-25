@@ -1,0 +1,2 @@
+
+for i in *.filtered.tsv; do awk -F "\t" '$16>3 {print FILENAME"\t"$0}' $i | sed -e 's/.20200222v1.ref.freebayes.training_RPGR_nano.gemini.filtered.tsv//' - | grep -v -e "22-38370185-T-G" -e "8-144875262-T-G" -e "5-110436345-AT-CC" - >> allSamplePS4.tsv; done
